@@ -1035,3 +1035,61 @@ a:focus-visible { outline:3px solid var(--paper-light); outline-offset:4px; }
     left:15px;
   }
 }
+
+/* Department Leadership records */
+
+.sheriffs-grid {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  align-items: stretch;
+}
+
+.physician-grid {
+  grid-template-columns: minmax(260px, 420px);
+  justify-content: center;
+}
+
+.medical-leadership {
+  margin-top: 4rem;
+}
+
+.leadership-details {
+  margin: 1.25rem 0 0;
+  padding-top: 1rem;
+  border-top: 1px solid rgba(74, 45, 20, 0.35);
+}
+
+.leadership-details div {
+  margin-bottom: 0.85rem;
+}
+
+.leadership-details div:last-child {
+  margin-bottom: 0;
+}
+
+.leadership-details dt {
+  margin-bottom: 0.15rem;
+  font-family: "Cinzel", Georgia, serif;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.leadership-details dd {
+  margin: 0;
+  font-family: "Crimson Text", Georgia, serif;
+  font-size: 1rem;
+}
+
+@media (max-width: 1000px) {
+  .sheriffs-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 650px) {
+  .sheriffs-grid,
+  .physician-grid {
+    grid-template-columns: 1fr;
+  }
+}
