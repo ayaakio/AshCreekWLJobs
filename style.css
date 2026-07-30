@@ -193,3 +193,541 @@ a:focus-visible { outline:3px solid var(--paper-light); outline-offset:4px; }
   .official-notice,.revision-section { padding-right:15px; padding-left:15px; }
   .official-stamp { margin-right:auto; }
 }
+
+/* =========================================================
+   TERRITORIAL PENAL CODE
+========================================================= */
+
+html {
+    scroll-behavior: smooth;
+}
+
+.penal-code-page {
+    background:
+        linear-gradient(rgba(12, 7, 5, 0.84), rgba(12, 7, 5, 0.9)),
+        var(--wood-background, #1b100b);
+}
+
+.penal-code-hero {
+    min-height: auto;
+    padding: 1.4rem 1rem 1.8rem;
+}
+
+.penal-code-hero .hero-inner {
+    width: min(1180px, 94%);
+    margin: 0 auto;
+}
+
+.penal-code-hero .eyebrow {
+    margin-bottom: 0.65rem;
+}
+
+.penal-code-hero h1 {
+    margin: 0;
+    font-size: clamp(1.8rem, 4vw, 3rem);
+}
+
+.penal-code-hero .subtitle {
+    margin: 0.65rem 0;
+}
+
+.penal-code-hero .hero-link {
+    display: inline-block;
+    margin-top: 0.25rem;
+}
+
+.penal-code-main {
+    width: min(980px, 92%);
+    margin: 3rem auto 5rem;
+}
+
+/* Law-book title page */
+
+.law-book-cover {
+    position: relative;
+    margin-bottom: 3rem;
+    padding: clamp(3rem, 8vw, 6rem) clamp(1.5rem, 8vw, 5rem);
+    overflow: hidden;
+    text-align: center;
+    color: #3a2617;
+    background:
+        linear-gradient(
+            115deg,
+            rgba(82, 55, 27, 0.13),
+            transparent 32%,
+            rgba(255, 245, 211, 0.2) 62%,
+            rgba(92, 55, 24, 0.13)
+        ),
+        #d7bf8e;
+    border: 1px solid #6b4d2c;
+    box-shadow:
+        8px 10px 0 rgba(45, 22, 10, 0.46),
+        0 20px 40px rgba(0, 0, 0, 0.38),
+        inset 0 0 45px rgba(67, 39, 17, 0.22);
+}
+
+.law-book-cover::before,
+.law-book-cover::after {
+    position: absolute;
+    top: 1.25rem;
+    width: 10px;
+    height: 10px;
+    content: "";
+    border: 1px solid #4a321f;
+    border-radius: 50%;
+    background: radial-gradient(circle at 35% 35%, #d7b36e, #674526 70%);
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.65);
+}
+
+.law-book-cover::before {
+    left: 1.35rem;
+}
+
+.law-book-cover::after {
+    right: 1.35rem;
+}
+
+.law-book-rule {
+    width: min(440px, 80%);
+    height: 1px;
+    margin: 0 auto;
+    background: rgba(68, 42, 21, 0.52);
+}
+
+.law-book-jurisdiction {
+    margin: 2rem 0 0.75rem;
+    color: #6c231f;
+    font-family: "Cinzel", serif;
+    font-size: 0.84rem;
+    font-weight: 700;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+}
+
+.law-book-cover h2 {
+    max-width: 760px;
+    margin: 0 auto;
+    color: #332014;
+    font-family: "Cinzel", serif;
+    font-size: clamp(2.2rem, 6vw, 4.4rem);
+    line-height: 1.08;
+    text-transform: uppercase;
+}
+
+.law-book-authority {
+    margin: 1.6rem auto;
+    font-size: clamp(1.05rem, 2vw, 1.25rem);
+    font-style: italic;
+    line-height: 1.45;
+}
+
+.law-book-divider {
+    display: flex;
+    align-items: center;
+    width: min(360px, 75%);
+    margin: 1.75rem auto;
+    color: #6c231f;
+}
+
+.law-book-divider::before,
+.law-book-divider::after {
+    flex: 1;
+    height: 1px;
+    content: "";
+    background: rgba(67, 41, 21, 0.45);
+}
+
+.law-book-divider span {
+    margin: 0 0.85rem;
+    font-size: 1.15rem;
+}
+
+.law-book-edition {
+    margin: 0;
+    font-family: "Cinzel", serif;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+}
+
+.law-book-year {
+    margin: 0.4rem 0 2rem;
+    font-family: "Cinzel", serif;
+    font-size: 1.4rem;
+    font-weight: 700;
+}
+
+/* Main parchment sections */
+
+.code-section {
+    position: relative;
+    margin: 0 0 2.25rem;
+    padding: clamp(1.75rem, 5vw, 3.5rem);
+    color: #352317;
+    background:
+        linear-gradient(
+            90deg,
+            rgba(101, 62, 27, 0.08),
+            transparent 10%,
+            transparent 90%,
+            rgba(101, 62, 27, 0.08)
+        ),
+        #efe0bd;
+    border: 1px solid #725338;
+    box-shadow:
+        6px 8px 0 rgba(47, 25, 13, 0.34),
+        0 18px 34px rgba(0, 0, 0, 0.24),
+        inset 0 0 32px rgba(79, 47, 21, 0.1);
+}
+
+.code-section-heading {
+    margin-bottom: 1.75rem;
+    padding-bottom: 1rem;
+    text-align: center;
+    border-bottom: 3px double rgba(77, 45, 25, 0.48);
+}
+
+.code-section-heading > p {
+    margin: 0 0 0.35rem;
+    color: #762820;
+    font-family: "Cinzel", serif;
+    font-size: 0.76rem;
+    font-weight: 700;
+    letter-spacing: 0.19em;
+    text-transform: uppercase;
+}
+
+.code-section-heading h2 {
+    margin: 0;
+    color: #3b2415;
+    font-family: "Cinzel", serif;
+    font-size: clamp(1.6rem, 4vw, 2.4rem);
+}
+
+.code-preamble > p {
+    max-width: 760px;
+    margin-right: auto;
+    margin-left: auto;
+    font-size: 1.12rem;
+    line-height: 1.72;
+}
+
+.code-opening-letter::first-letter {
+    float: left;
+    margin: 0.1rem 0.45rem 0 0;
+    color: #762820;
+    font-family: "Cinzel", serif;
+    font-size: 4rem;
+    font-weight: 700;
+    line-height: 0.78;
+}
+
+/* Contents */
+
+.code-contents-list {
+    max-width: 760px;
+    margin: 0 auto;
+    padding: 0;
+    list-style: none;
+    counter-reset: code-title;
+}
+
+.code-contents-list li {
+    border-bottom: 1px dotted rgba(66, 40, 22, 0.5);
+}
+
+.code-contents-list a {
+    display: grid;
+    grid-template-columns: 105px 1fr;
+    gap: 1rem;
+    padding: 1rem 0.35rem;
+    color: #3d2819;
+    text-decoration: none;
+    transition:
+        color 160ms ease,
+        padding-left 160ms ease,
+        background 160ms ease;
+}
+
+.code-contents-list a:hover,
+.code-contents-list a:focus-visible {
+    padding-left: 0.75rem;
+    color: #762820;
+    background: rgba(117, 40, 32, 0.06);
+}
+
+.code-contents-list span {
+    color: #762820;
+    font-family: "Cinzel", serif;
+    font-size: 0.82rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+}
+
+/* Title headings */
+
+.code-title {
+    scroll-margin-top: 1.5rem;
+}
+
+.code-title-heading {
+    position: relative;
+    margin: calc(clamp(1.75rem, 5vw, 3.5rem) * -1)
+        calc(clamp(1.75rem, 5vw, 3.5rem) * -1)
+        2.25rem;
+    padding: 1.65rem 1.5rem;
+    text-align: center;
+    color: #f1dfbc;
+    background:
+        linear-gradient(
+            100deg,
+            rgba(255, 255, 255, 0.03),
+            transparent 45%,
+            rgba(255, 255, 255, 0.03)
+        ),
+        #4c1c19;
+    border-bottom: 4px double #b58b54;
+}
+
+.code-title-heading > p {
+    margin: 0 0 0.3rem;
+    color: #d9b47a;
+    font-family: "Cinzel", serif;
+    font-size: 0.76rem;
+    font-weight: 700;
+    letter-spacing: 0.19em;
+    text-transform: uppercase;
+}
+
+.code-title-heading h2 {
+    margin: 0;
+    color: #f4e4c3;
+    font-family: "Cinzel", serif;
+    font-size: clamp(1.55rem, 4vw, 2.35rem);
+}
+
+.code-title-number {
+    display: block;
+    margin-top: 0.55rem;
+    color: rgba(244, 228, 195, 0.72);
+    font-size: 0.78rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+}
+
+/* Statutes */
+
+.statute {
+    padding: 0 0 2.2rem;
+    scroll-margin-top: 1.5rem;
+}
+
+.statute + .statute {
+    padding-top: 2.2rem;
+    border-top: 1px solid rgba(74, 44, 23, 0.36);
+}
+
+.statute-heading {
+    margin-bottom: 1rem;
+}
+
+.statute-heading > p {
+    margin: 0 0 0.3rem;
+    color: #8a5b2f;
+    font-family: "Cinzel", serif;
+    font-size: 0.69rem;
+    font-weight: 700;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+}
+
+.statute-heading h3 {
+    margin: 0;
+    color: #3c2516;
+    font-family: "Cinzel", serif;
+    font-size: clamp(1.25rem, 3vw, 1.65rem);
+    line-height: 1.25;
+}
+
+.statute-heading h3 span {
+    display: inline-block;
+    min-width: 82px;
+    margin-right: 0.45rem;
+    color: #762820;
+}
+
+.statute > p {
+    margin: 0;
+    font-size: 1.08rem;
+    line-height: 1.65;
+}
+
+.statute-capital {
+    margin: 1rem -1rem 0;
+    padding: 1.5rem 1rem 2rem;
+    background: rgba(118, 40, 32, 0.075);
+    border-top: 2px solid rgba(118, 40, 32, 0.55);
+    border-bottom: 2px solid rgba(118, 40, 32, 0.55);
+}
+
+/* Sentences and fines */
+
+.penalty-list {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(170px, 230px));
+    gap: 0.75rem;
+    margin: 1.35rem 0 0;
+}
+
+.penalty-list div {
+    border: 1px solid rgba(74, 44, 23, 0.42);
+    background: rgba(255, 250, 235, 0.48);
+}
+
+.penalty-list dt {
+    padding: 0.45rem 0.7rem;
+    color: #f5e6c8;
+    background: #5b211d;
+    font-family: "Cinzel", serif;
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.07em;
+    text-transform: uppercase;
+}
+
+.penalty-list dd {
+    margin: 0;
+    padding: 0.65rem 0.7rem;
+    color: #352317;
+    font-size: 1.05rem;
+    font-weight: 700;
+}
+
+.statute-note {
+    margin-top: 1.25rem !important;
+    padding: 0.9rem 1rem;
+    color: #59341f;
+    background: rgba(128, 78, 34, 0.09);
+    border-left: 4px solid #8a5b2f;
+    font-size: 0.98rem !important;
+    font-style: italic;
+}
+
+/* Certification */
+
+.code-certification {
+    margin: 3rem auto;
+    padding: 2rem;
+    text-align: center;
+    color: #d9bd8b;
+}
+
+.code-certification p {
+    margin: 0;
+    font-family: "Cinzel", serif;
+    font-size: 0.84rem;
+    font-weight: 700;
+    letter-spacing: 0.13em;
+    text-transform: uppercase;
+}
+
+.certification-line {
+    width: min(360px, 75%);
+    height: 1px;
+    margin: 1.4rem auto 0.7rem;
+    background: rgba(217, 189, 139, 0.48);
+}
+
+.code-certification span {
+    font-style: italic;
+}
+
+.back-to-top {
+    display: block;
+    width: fit-content;
+    margin: 0 auto 3rem;
+    color: #d4b47e;
+    font-family: "Cinzel", serif;
+    font-size: 0.78rem;
+    letter-spacing: 0.08em;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+.back-to-top:hover,
+.back-to-top:focus-visible {
+    color: #fff0cf;
+    text-decoration: underline;
+}
+
+/* Responsive adjustments */
+
+@media (max-width: 720px) {
+    .penal-code-main {
+        width: min(94%, 980px);
+        margin-top: 1.75rem;
+    }
+
+    .law-book-cover {
+        margin-bottom: 1.75rem;
+        padding-top: 3.5rem;
+        padding-bottom: 3.5rem;
+    }
+
+    .code-section {
+        padding: 1.5rem;
+    }
+
+    .code-title-heading {
+        margin: -1.5rem -1.5rem 1.75rem;
+    }
+
+    .code-contents-list a {
+        grid-template-columns: 1fr;
+        gap: 0.25rem;
+    }
+
+    .penalty-list {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .statute-heading h3 span {
+        display: block;
+        min-width: 0;
+        margin: 0 0 0.3rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .penal-code-hero {
+        padding-right: 0.8rem;
+        padding-left: 0.8rem;
+    }
+
+    .law-book-cover h2 {
+        font-size: 2rem;
+    }
+
+    .law-book-jurisdiction {
+        font-size: 0.7rem;
+        letter-spacing: 0.13em;
+    }
+
+    .code-section {
+        padding: 1.25rem;
+    }
+
+    .code-title-heading {
+        margin: -1.25rem -1.25rem 1.5rem;
+        padding: 1.4rem 1rem;
+    }
+
+    .penalty-list {
+        grid-template-columns: 1fr;
+    }
+
+    .statute-capital {
+        margin-right: -0.45rem;
+        margin-left: -0.45rem;
+    }
+}
