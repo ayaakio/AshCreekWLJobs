@@ -32,53 +32,71 @@
     >
 </head>
 
-<body class="penal-code-page">
+<body class="penal-code-page" id="top">
 
     <header class="site-header">
-  <div class="logo"><h1>Ash Creek RP</h1><p>Official departmental records and procedures</p></div>
+  <div class="logo">
+    <h1>Ash Creek RP</h1>
+    <p>Official departmental records and procedures</p>
+  </div>
+
   <nav aria-label="Main navigation">
     <a href="index.html">Records Office</a>
-    <a href="law.html" class="active">Deputy Handbook</a>
+    <a href="law.html">Deputy Handbook</a>
     <a href="doctors.html">Medical Handbook</a>
-    <a href="penalcode.html">Territorial Penal Code</a>
+    <a href="penalcode.html" class="active">Territorial Penal Code</a>
   </nav>
 </header>
 
     <main class="penal-code-main">
 
         <!-- Law-book title page -->
-        <section class="law-book-cover" aria-labelledby="code-title">
+        <section class="penal-code-cover-wrap">
 
-            <div class="law-book-rule"></div>
+  <div class="law-book-cover pinned-panel">
 
-            <p class="law-book-jurisdiction">
-                Territory of Ash Creek
-            </p>
+    <span
+      class="paper-pin paper-pin-left"
+      aria-hidden="true"
+    ></span>
 
-            <h2 id="code-title">
-                Territorial Penal Code
-            </h2>
+    <span
+      class="paper-pin paper-pin-right"
+      aria-hidden="true"
+    ></span>
 
-            <p class="law-book-authority">
-                Enacted for the preservation of peace,<br>
-                property and lawful order
-            </p>
+    <div class="law-book-rule"></div>
 
-            <div class="law-book-divider">
-                <span aria-hidden="true">&#10022;</span>
-            </div>
+    <p class="law-book-jurisdiction">
+      Territory of Ash Creek
+    </p>
 
-            <p class="law-book-edition">
-                First Territorial Edition
-            </p>
+    <h2 id="code-title">
+      Territorial Penal Code
+    </h2>
 
-            <p class="law-book-year">
-                1899
-            </p>
+    <p class="law-book-authority">
+      Enacted for the preservation of peace,<br>
+      property and lawful order
+    </p>
 
-            <div class="law-book-rule"></div>
+    <div class="law-book-divider">
+      <span aria-hidden="true">&#10022;</span>
+    </div>
 
-        </section>
+    <p class="law-book-edition">
+      First Territorial Edition
+    </p>
+
+    <p class="law-book-year">
+      1899
+    </p>
+
+    <div class="law-book-rule"></div>
+
+  </div>
+
+</section>
 
         <!-- Preamble -->
         <section class="code-section code-preamble" id="preamble">
@@ -111,69 +129,55 @@
         </section>
 
         <!-- Contents -->
-        <nav class="code-section code-contents" aria-labelledby="contents-title">
+        <section class="chapter-directory code-directory">
 
-            <header class="code-section-heading">
-                <p>Contents</p>
-                <h2 id="contents-title">Titles of the Code</h2>
-            </header>
+  <div class="section-heading">
+    <p>Table of Contents</p>
+    <h2>Titles of the Territorial Code</h2>
+  </div>
 
-            <ol class="code-contents-list">
+  <div class="chapter-grid">
 
-                <li>
-                    <a href="#title-one">
-                        <span>Title I</span>
-                        Crimes Against Public Order
-                    </a>
-                </li>
+    <a href="#title-one" class="chapter-board">
+      <span>Title I</span>
+      <h3>Crimes Against Public Order</h3>
+    </a>
 
-                <li>
-                    <a href="#title-two">
-                        <span>Title II</span>
-                        Crimes Against Property
-                    </a>
-                </li>
+    <a href="#title-two" class="chapter-board">
+      <span>Title II</span>
+      <h3>Crimes Against Property</h3>
+    </a>
 
-                <li>
-                    <a href="#title-three">
-                        <span>Title III</span>
-                        Crimes Against Persons
-                    </a>
-                </li>
+    <a href="#title-three" class="chapter-board">
+      <span>Title III</span>
+      <h3>Crimes Against Persons</h3>
+    </a>
 
-                <li>
-                    <a href="#title-four">
-                        <span>Title IV</span>
-                        Crimes Against Government
-                    </a>
-                </li>
+    <a href="#title-four" class="chapter-board">
+      <span>Title IV</span>
+      <h3>Crimes Against Government</h3>
+    </a>
 
-                <li>
-                    <a href="#title-five">
-                        <span>Title V</span>
-                        Weapons Offences
-                    </a>
-                </li>
+    <a href="#title-five" class="chapter-board">
+      <span>Title V</span>
+      <h3>Weapons Offences</h3>
+    </a>
 
-                <li>
-                    <a href="#title-six">
-                        <span>Title VI</span>
-                        Robbery and Crimes Against Commerce
-                    </a>
-                </li>
+    <a href="#title-six" class="chapter-board">
+      <span>Title VI</span>
+      <h3>Robbery and Crimes Against Commerce</h3>
+    </a>
 
-                <li>
-                    <a href="#general-provisions">
-                        <span>Title VII</span>
-                        General Provisions
-                    </a>
-                </li>
+    <a href="#general-provisions" class="chapter-board">
+      <span>Title VII</span>
+      <h3>General Provisions</h3>
+    </a>
 
-            </ol>
+  </div>
 
-        </nav>
-
+</section>
         <!-- TITLE I -->
+        <section class="penal-code-content">
         <section class="code-section code-title" id="title-one">
 
             <header class="code-title-heading">
@@ -1369,7 +1373,7 @@
             </article>
 
         </section>
-
+</section>
         <section class="code-certification">
 
             <p>Certified as an Official Territorial Record</p>
