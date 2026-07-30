@@ -767,3 +767,271 @@ a:focus-visible { outline:3px solid var(--paper-light); outline-offset:4px; }
     padding:35px 24px;
   }
 }
+
+/* =========================================================
+   DEPARTMENT LEADERSHIP
+========================================================= */
+
+.leadership-page {
+  padding-bottom:90px;
+}
+
+/* =========================
+   LEADERSHIP INTRODUCTION
+========================= */
+
+.leadership-intro {
+  padding:80px 20px 55px;
+}
+
+.leadership-subtitle {
+  margin-bottom:24px;
+
+  color:#70452d;
+
+  font-family:"Cinzel",Georgia,serif;
+  font-size:1rem;
+  font-weight:700;
+  letter-spacing:.12em;
+  text-transform:uppercase;
+}
+
+/* =========================
+   LEADERSHIP RECORDS
+========================= */
+
+.leadership-records {
+  padding:45px 20px 80px;
+}
+
+.leadership-grid {
+  width:min(950px,92%);
+  margin:0 auto;
+
+  display:grid;
+  grid-template-columns:repeat(2,minmax(280px,380px));
+  justify-content:center;
+  gap:55px;
+}
+
+/* =========================
+   LEADERSHIP CARD
+========================= */
+
+.leadership-card {
+  position:relative;
+  padding:45px 26px 30px;
+
+  background:
+    linear-gradient(
+      180deg,
+      #3b281d 0%,
+      #2c1c15 100%
+    );
+
+  border:2px solid var(--wood-light);
+
+  box-shadow:
+    inset 0 0 0 2px rgba(126,82,50,.22),
+    7px 9px 0 #160e0a,
+    0 18px 30px var(--shadow);
+}
+
+/* =========================
+   WOODEN NAMEPLATE
+========================= */
+
+.leadership-nameplate {
+  width:calc(100% - 40px);
+  min-height:64px;
+
+  position:absolute;
+  top:-32px;
+  left:20px;
+  z-index:2;
+
+  display:flex;
+  align-items:center;
+  justify-content:center;
+
+  padding:12px 38px;
+
+  background:
+    linear-gradient(
+      180deg,
+      #6d472e 0%,
+      #4a2d1d 55%,
+      #382116 100%
+    );
+
+  border:2px solid #2a170f;
+
+  box-shadow:
+    inset 0 0 0 2px rgba(194,139,88,.18),
+    4px 5px 0 #1c100b,
+    0 8px 15px rgba(0,0,0,.42);
+}
+
+.leadership-nameplate::before,
+.leadership-nameplate::after {
+  width:9px;
+  height:9px;
+
+  position:absolute;
+  top:50%;
+
+  content:"";
+
+  border:1px solid #4d301c;
+  border-radius:50%;
+
+  background:
+    radial-gradient(
+      circle at 35% 30%,
+      #d1ab70 0%,
+      #866039 50%,
+      #4d301c 100%
+    );
+
+  transform:translateY(-50%);
+
+  box-shadow:1px 2px 2px rgba(0,0,0,.55);
+}
+
+.leadership-nameplate::before {
+  left:12px;
+}
+
+.leadership-nameplate::after {
+  right:12px;
+}
+
+.leadership-nameplate h3 {
+  color:#f1dfbd;
+
+  font-family:"Cinzel",Georgia,serif;
+  font-size:clamp(1rem,2.5vw,1.3rem);
+  line-height:1.25;
+  letter-spacing:.05em;
+  text-align:center;
+  text-shadow:2px 2px 0 rgba(0,0,0,.55);
+  text-transform:uppercase;
+}
+
+/* =========================
+   PORTRAIT
+========================= */
+
+.leadership-portrait-frame {
+  width:100%;
+  aspect-ratio:4 / 5;
+
+  position:relative;
+  overflow:hidden;
+
+  background:#1f140f;
+
+  border:3px solid #9a6b45;
+
+  box-shadow:
+    inset 0 0 0 3px #382318,
+    0 9px 18px rgba(0,0,0,.48);
+}
+
+.leadership-portrait-frame::after {
+  position:absolute;
+  inset:0;
+
+  content:"";
+  pointer-events:none;
+
+  box-shadow:
+    inset 0 0 25px rgba(25,14,9,.48),
+    inset 0 0 0 1px rgba(239,209,163,.16);
+}
+
+.leadership-portrait {
+  width:100%;
+  height:100%;
+
+  display:block;
+
+  object-fit:cover;
+  object-position:center top;
+
+  filter:
+    sepia(.16)
+    saturate(.88)
+    contrast(1.06);
+}
+
+/* =========================
+   DEPARTMENT AND OFFICE
+========================= */
+
+.leadership-office {
+  margin-top:24px;
+  text-align:center;
+}
+
+.leadership-office p {
+  margin-bottom:8px;
+
+  color:#d7c19e;
+
+  font-size:1rem;
+  font-style:italic;
+}
+
+.leadership-office span {
+  display:inline-block;
+
+  padding:8px 18px;
+
+  color:#e3be8c;
+
+  border-top:1px solid #83593b;
+  border-bottom:1px solid #83593b;
+
+  font-family:"Cinzel",Georgia,serif;
+  font-size:.82rem;
+  font-weight:700;
+  letter-spacing:.12em;
+  text-transform:uppercase;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width:800px) {
+  .leadership-grid {
+    grid-template-columns:minmax(280px,380px);
+    gap:72px;
+  }
+}
+
+@media (max-width:550px) {
+  .leadership-intro {
+    padding:55px 15px 35px;
+  }
+
+  .leadership-records {
+    padding:40px 15px 60px;
+  }
+
+  .leadership-grid {
+    width:100%;
+    grid-template-columns:minmax(0,380px);
+  }
+
+  .leadership-card {
+    padding-right:18px;
+    padding-left:18px;
+  }
+
+  .leadership-nameplate {
+    width:calc(100% - 30px);
+    left:15px;
+  }
+}
