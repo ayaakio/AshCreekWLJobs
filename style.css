@@ -771,7 +771,9 @@ a:focus-visible { outline:3px solid var(--paper-light); outline-offset:4px; }
 /* =========================================================
    Department Leadership
    ========================================================= */
-
+.leadership-intro {
+    margin-top: 3rem;
+}
 .leadership-records {
   width: min(1120px, calc(100% - 2rem));
   margin: 4rem auto 0;
