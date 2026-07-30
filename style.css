@@ -769,307 +769,235 @@ a:focus-visible { outline:3px solid var(--paper-light); outline-offset:4px; }
 }
 
 /* =========================================================
-   DEPARTMENT LEADERSHIP
-========================================================= */
-
-.leadership-page {
-  padding-bottom:90px;
-}
-
-/* =========================
-   LEADERSHIP INTRODUCTION
-========================= */
-
-.leadership-intro {
-  padding:80px 20px 55px;
-}
-
-.leadership-subtitle {
-  margin-bottom:24px;
-
-  color:#70452d;
-
-  font-family:"Cinzel",Georgia,serif;
-  font-size:1rem;
-  font-weight:700;
-  letter-spacing:.12em;
-  text-transform:uppercase;
-}
-
-/* =========================
-   LEADERSHIP RECORDS
-========================= */
+   Department Leadership
+   ========================================================= */
 
 .leadership-records {
-  padding:45px 20px 80px;
+  width: min(1120px, calc(100% - 2rem));
+  margin: 4rem auto 0;
 }
+
+.section-heading {
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.section-heading p {
+  margin: 0 0 0.35rem;
+  font-family: "Cinzel", Georgia, serif;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
+.section-heading h2 {
+  margin: 0;
+  font-family: "Cinzel", Georgia, serif;
+  font-size: clamp(1.8rem, 4vw, 2.8rem);
+  line-height: 1.15;
+}
+
+
+/* Six-column layout allows three equal cards,
+   followed by two properly centred cards */
 
 .leadership-grid {
-  width:min(950px,92%);
-  margin:0 auto;
-
-  display:grid;
-  grid-template-columns:repeat(2,minmax(280px,380px));
-  justify-content:center;
-  gap:55px;
+  display: grid;
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+  gap: 2.25rem 1.75rem;
+  align-items: stretch;
 }
-
-/* =========================
-   LEADERSHIP CARD
-========================= */
 
 .leadership-card {
-  position:relative;
-  padding:45px 26px 30px;
+  grid-column: span 2;
+
+  display: flex;
+  flex-direction: column;
+
+  min-width: 0;
+  padding: 0.8rem;
 
   background:
     linear-gradient(
-      180deg,
-      #3b281d 0%,
-      #2c1c15 100%
+      rgba(52, 29, 18, 0.94),
+      rgba(35, 19, 13, 0.97)
     );
 
-  border:2px solid var(--wood-light);
+  border: 1px solid rgba(181, 126, 66, 0.75);
 
   box-shadow:
-    inset 0 0 0 2px rgba(126,82,50,.22),
-    7px 9px 0 #160e0a,
-    0 18px 30px var(--shadow);
+    0 10px 20px rgba(0, 0, 0, 0.38),
+    inset 0 0 0 3px rgba(89, 49, 27, 0.55),
+    inset 0 0 18px rgba(0, 0, 0, 0.4);
 }
 
-/* =========================
-   WOODEN NAMEPLATE
-========================= */
+
+/* Centre cards four and five on the second row */
+
+.sheriffs-grid .leadership-card:nth-child(4) {
+  grid-column: 2 / span 2;
+}
+
+.sheriffs-grid .leadership-card:nth-child(5) {
+  grid-column: 4 / span 2;
+}
+
+
+/* Wooden nameplate */
 
 .leadership-nameplate {
-  width:calc(100% - 40px);
-  min-height:64px;
+  position: relative;
+  z-index: 2;
 
-  position:absolute;
-  top:-32px;
-  left:20px;
-  z-index:2;
+  width: calc(100% + 1rem);
+  margin: -1.45rem -0.5rem 0.75rem;
+  padding: 0.55rem 2rem;
 
-  display:flex;
-  align-items:center;
-  justify-content:center;
-
-  padding:12px 38px;
+  text-align: center;
 
   background:
     linear-gradient(
-      180deg,
-      #6d472e 0%,
-      #4a2d1d 55%,
-      #382116 100%
+      to bottom,
+      #674528,
+      #402817 55%,
+      #2c190f
     );
 
-  border:2px solid #2a170f;
+  border: 1px solid #93643b;
 
   box-shadow:
-    inset 0 0 0 2px rgba(194,139,88,.18),
-    4px 5px 0 #1c100b,
-    0 8px 15px rgba(0,0,0,.42);
+    0 4px 8px rgba(0, 0, 0, 0.45),
+    inset 0 1px rgba(255, 231, 180, 0.2);
 }
 
 .leadership-nameplate::before,
 .leadership-nameplate::after {
-  width:9px;
-  height:9px;
+  content: "";
+  position: absolute;
+  top: 50%;
 
-  position:absolute;
-  top:50%;
+  width: 7px;
+  height: 7px;
 
-  content:"";
+  background: radial-gradient(
+    circle at 35% 35%,
+    #d3ad65,
+    #755122 65%,
+    #34200e
+  );
 
-  border:1px solid #4d301c;
-  border-radius:50%;
+  border-radius: 50%;
+  transform: translateY(-50%);
 
-  background:
-    radial-gradient(
-      circle at 35% 30%,
-      #d1ab70 0%,
-      #866039 50%,
-      #4d301c 100%
-    );
-
-  transform:translateY(-50%);
-
-  box-shadow:1px 2px 2px rgba(0,0,0,.55);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.8);
 }
 
 .leadership-nameplate::before {
-  left:12px;
+  left: 0.65rem;
 }
 
 .leadership-nameplate::after {
-  right:12px;
+  right: 0.65rem;
 }
 
 .leadership-nameplate h3 {
-  color:#f1dfbd;
+  margin: 0;
 
-  font-family:"Cinzel",Georgia,serif;
-  font-size:clamp(1rem,2.5vw,1.3rem);
-  line-height:1.25;
-  letter-spacing:.05em;
-  text-align:center;
-  text-shadow:2px 2px 0 rgba(0,0,0,.55);
-  text-transform:uppercase;
+  font-family: "Cinzel", Georgia, serif;
+  font-size: 0.95rem;
+  line-height: 1.15;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
 }
 
-/* =========================
-   PORTRAIT
-========================= */
+
+/* Portrait */
 
 .leadership-portrait-frame {
-  width:100%;
-  aspect-ratio:4 / 5;
+  position: relative;
+  overflow: hidden;
 
-  position:relative;
-  overflow:hidden;
+  width: 100%;
+  aspect-ratio: 4 / 5;
 
-  background:#1f140f;
+  background:
+    linear-gradient(
+      135deg,
+      rgba(65, 43, 27, 0.95),
+      rgba(23, 14, 10, 0.98)
+    );
 
-  border:3px solid #9a6b45;
-
-  box-shadow:
-    inset 0 0 0 3px #382318,
-    0 9px 18px rgba(0,0,0,.48);
-}
-
-.leadership-portrait-frame::after {
-  position:absolute;
-  inset:0;
-
-  content:"";
-  pointer-events:none;
+  border: 1px solid #815530;
 
   box-shadow:
-    inset 0 0 25px rgba(25,14,9,.48),
-    inset 0 0 0 1px rgba(239,209,163,.16);
+    inset 0 0 0 3px rgba(32, 18, 11, 0.65),
+    inset 0 0 22px rgba(0, 0, 0, 0.65),
+    0 4px 9px rgba(0, 0, 0, 0.4);
 }
 
 .leadership-portrait {
-  width:100%;
-  height:100%;
-
-  display:block;
-
-  object-fit:cover;
-  object-position:center top;
-
-  filter:
-    sepia(.16)
-    saturate(.88)
-    contrast(1.06);
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
 }
 
-/* =========================
-   DEPARTMENT AND OFFICE
-========================= */
+
+/* Written record beneath the portrait */
 
 .leadership-office {
-  margin-top:24px;
-  text-align:center;
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+
+  padding: 1.15rem 0.45rem 0.5rem;
+  text-align: center;
 }
 
-.leadership-office p {
-  margin-bottom:8px;
+.leadership-office > p {
+  margin: 0;
 
-  color:#d7c19e;
-
-  font-size:1rem;
-  font-style:italic;
+  font-family: "Crimson Text", Georgia, serif;
+  font-size: 1.02rem;
+  font-style: italic;
+  line-height: 1.25;
 }
 
-.leadership-office span {
-  display:inline-block;
+.leadership-office > span {
+  display: inline-block;
 
-  padding:8px 18px;
+  width: fit-content;
+  margin: 0.85rem auto 0;
+  padding: 0.3rem 1rem;
 
-  color:#e3be8c;
+  font-family: "Cinzel", Georgia, serif;
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.13em;
+  text-transform: uppercase;
 
-  border-top:1px solid #83593b;
-  border-bottom:1px solid #83593b;
-
-  font-family:"Cinzel",Georgia,serif;
-  font-size:.82rem;
-  font-weight:700;
-  letter-spacing:.12em;
-  text-transform:uppercase;
-}
-
-/* =========================
-   RESPONSIVE
-========================= */
-
-@media (max-width:800px) {
-  .leadership-grid {
-    grid-template-columns:minmax(280px,380px);
-    gap:72px;
-  }
-}
-
-@media (max-width:550px) {
-  .leadership-intro {
-    padding:55px 15px 35px;
-  }
-
-  .leadership-records {
-    padding:40px 15px 60px;
-  }
-
-  .leadership-grid {
-    width:100%;
-    grid-template-columns:minmax(0,380px);
-  }
-
-  .leadership-card {
-    padding-right:18px;
-    padding-left:18px;
-  }
-
-  .leadership-nameplate {
-    width:calc(100% - 30px);
-    left:15px;
-  }
-}
-
-/* Department Leadership records */
-
-.sheriffs-grid {
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  align-items: stretch;
-}
-
-.physician-grid {
-  grid-template-columns: minmax(260px, 420px);
-  justify-content: center;
-}
-
-.medical-leadership {
-  margin-top: 4rem;
+  border-top: 1px solid rgba(181, 126, 66, 0.55);
+  border-bottom: 1px solid rgba(181, 126, 66, 0.55);
 }
 
 .leadership-details {
-  margin: 1.25rem 0 0;
-  padding-top: 1rem;
-  border-top: 1px solid rgba(74, 45, 20, 0.35);
+  margin: 1rem 0 0;
+  padding-top: 0.9rem;
+
+  border-top: 1px solid rgba(181, 126, 66, 0.25);
 }
 
-.leadership-details div {
-  margin-bottom: 0.85rem;
-}
-
-.leadership-details div:last-child {
-  margin-bottom: 0;
+.leadership-details div + div {
+  margin-top: 0.8rem;
 }
 
 .leadership-details dt {
   margin-bottom: 0.15rem;
+
   font-family: "Cinzel", Georgia, serif;
-  font-size: 0.72rem;
+  font-size: 0.62rem;
   font-weight: 700;
   letter-spacing: 0.12em;
   text-transform: uppercase;
@@ -1077,19 +1005,59 @@ a:focus-visible { outline:3px solid var(--paper-light); outline-offset:4px; }
 
 .leadership-details dd {
   margin: 0;
+
   font-family: "Crimson Text", Georgia, serif;
-  font-size: 1rem;
+  font-size: 0.95rem;
+  line-height: 1.25;
 }
 
-@media (max-width: 1000px) {
-  .sheriffs-grid {
+
+/* =========================================================
+   Chief Physician
+   Same width as every Sheriff card
+   ========================================================= */
+
+.medical-leadership {
+  margin-top: 5rem;
+}
+
+.physician-grid .leadership-card {
+  grid-column: 3 / span 2;
+}
+
+
+/* =========================================================
+   Responsive layout
+   ========================================================= */
+
+@media (max-width: 900px) {
+  .leadership-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .leadership-card,
+  .sheriffs-grid .leadership-card:nth-child(4),
+  .sheriffs-grid .leadership-card:nth-child(5),
+  .physician-grid .leadership-card {
+    grid-column: auto;
+  }
+
+  .physician-grid .leadership-card {
+    width: 100%;
+    max-width: none;
   }
 }
 
-@media (max-width: 650px) {
-  .sheriffs-grid,
-  .physician-grid {
+@media (max-width: 620px) {
+  .leadership-records {
+    width: min(420px, calc(100% - 1.5rem));
+  }
+
+  .leadership-grid {
     grid-template-columns: 1fr;
+  }
+
+  .leadership-nameplate {
+    margin-top: -1.25rem;
   }
 }
