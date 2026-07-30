@@ -193,3 +193,85 @@ a:focus-visible { outline:3px solid var(--paper-light); outline-offset:4px; }
   .official-notice,.revision-section { padding-right:15px; padding-left:15px; }
   .official-stamp { margin-right:auto; }
 }
+
+/* ===========================
+   PENAL CODE
+=========================== */
+
+.statute-list{
+    display:flex;
+    flex-direction:column;
+    gap:2rem;
+}
+
+.statute{
+
+    background:#f9f1dd;
+
+    border-left:8px solid #6d1f1f;
+
+    padding:1.8rem;
+
+    border-radius:8px;
+
+    box-shadow:0 6px 14px rgba(0,0,0,.08);
+
+}
+
+.statute-header{
+
+    border-bottom:2px solid rgba(0,0,0,.12);
+
+    margin-bottom:1rem;
+
+    padding-bottom:.6rem;
+
+}
+
+.statute-header h3{
+
+    margin:0;
+
+    color:#5d1717;
+
+    font-family:'Cinzel',serif;
+
+    letter-spacing:1px;
+
+}
+
+.penalty-table{
+
+    margin-top:1.2rem;
+
+    width:320px;
+
+    border-collapse:collapse;
+
+}
+
+.penalty-table th{
+
+    background:#6d1f1f;
+
+    color:white;
+
+    padding:10px;
+
+    width:50%;
+
+}
+
+.penalty-table td{
+
+    background:white;
+
+    padding:10px;
+
+}
+
+.penalty-table tr{
+
+    border-bottom:1px solid #ddd;
+
+}
