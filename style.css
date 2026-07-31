@@ -1058,3 +1058,22 @@ a:focus-visible { outline:3px solid var(--paper-light); outline-offset:4px; }
     margin-top: -1.25rem;
   }
 }
+
+.site-header {
+  text-align: center;
+}
+
+.site-header .logo {
+  width: 100%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.site-header nav {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
